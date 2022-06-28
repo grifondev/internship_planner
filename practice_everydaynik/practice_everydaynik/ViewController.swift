@@ -9,15 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var buttonTitle: String? = ""
     
+    @IBOutlet weak var timeLabel01: UILabel!
     @IBOutlet weak var l01: UILabel!
-    @IBAction func button01(_ sender: UIButton) {
-        l01.text = "zzzzzzzzz"
+    @IBAction func buttonsTime(_ sender: UIButton) {
+        buttonTitle = sender.titleLabel?.text
+        openDealWindow()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    func openDealWindow() {
+        let windowDeal = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dealScrn") as! dealScreen // 1
+                
+        self.addChild(windowDeal) // 2
+        windowDeal.view.frame = self.view.frame  // 3
+        self.view.addSubview(windowDeal.view) // 4
+                
+        windowDeal.didMove(toParent: self) // 5
+        
+        windowDeal.windowTime.text = buttonTitle!
     }
 
 
