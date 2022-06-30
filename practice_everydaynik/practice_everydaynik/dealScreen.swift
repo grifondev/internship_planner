@@ -14,6 +14,7 @@ class dealScreen: UIViewController {
     @IBOutlet weak var window: UIView!
     
     @IBAction func updateButton(_ sender: UIButton) {
+        //here
         self.view.removeFromSuperview()
     }
     
@@ -21,7 +22,6 @@ class dealScreen: UIViewController {
         super.viewDidLoad()
         makeWindowBeautiful()
     }
-    
     
     func makeWindowBeautiful(){
         window.layer.cornerRadius = 25

@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     var buttonTitle: String? = ""
     
-    @IBOutlet weak var timeLabel01: UILabel!
     @IBOutlet weak var l01: UILabel!
     @IBAction func buttonsTime(_ sender: UIButton) {
         buttonTitle = sender.titleLabel?.text
