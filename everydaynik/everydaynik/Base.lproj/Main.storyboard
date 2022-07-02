@@ -16,6 +16,134 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="calCell" translatesAutoresizingMaskIntoConstraints="NO" id="Kvu-L9-1xy">
+                                <rect key="frame" x="20" y="43" width="374" height="335"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCl-y6-Dea">
+                                        <rect key="frame" x="0.0" y="9" width="86" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="previousMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yB7-yp-s0M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB2-LF-rT4">
+                                        <rect key="frame" x="268" y="9" width="126" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="nextMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qip-OW-5cR"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-uo-10Y">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-Rj-aax">
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hI-BT-mdj">
+                                                <rect key="frame" x="61" y="0.0" width="33.5" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-DN-xaG">
+                                                <rect key="frame" x="122.5" y="0.0" width="29" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDw-7x-tV0">
+                                                <rect key="frame" x="179.5" y="0.0" width="35" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-iF-7YZ">
+                                                <rect key="frame" x="242.5" y="0.0" width="29.5" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-Qi-O5G">
+                                                <rect key="frame" x="300" y="0.0" width="20" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnN-Nq-7ee">
+                                                <rect key="frame" x="348" y="0.0" width="26" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YRE-Rj-aax" firstAttribute="width" secondItem="3hI-BT-mdj" secondAttribute="width" multiplier="0.985075" id="LqN-n5-1I9"/>
+                                        </constraints>
+                                    </stackView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-zM-HnA">
+                                        <rect key="frame" x="0.0" y="87.5" width="374" height="248.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="YIv-p7-Zax">
+                                            <size key="itemSize" width="64" height="64"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calCell" id="ObX-Ca-Eyn" customClass="CalendarCell" customModule="everydaynik" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K2W-eo-zoF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-cE-XS9">
+                                                            <rect key="frame" x="20" y="-6" width="24" height="53"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="64" height="64"/>
+                                                <connections>
+                                                    <outlet property="dayOfMonth" destination="78Q-cE-XS9" id="Lvv-v9-Ihr"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="RCR-qO-Ztf"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="eQa-UL-kCx"/>
+                                        </connections>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Feb 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-Kr-GJF">
+                                        <rect key="frame" x="84" y="9" width="186" height="44"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ChC-uo-10Y" firstAttribute="leading" secondItem="Kvu-L9-1xy" secondAttribute="leading" id="ONC-G0-dxA"/>
+                                    <constraint firstItem="NeK-Kr-GJF" firstAttribute="leading" secondItem="Kvu-L9-1xy" secondAttribute="leading" constant="84" id="Y3h-za-u7a"/>
+                                    <constraint firstAttribute="trailing" secondItem="3lP-zM-HnA" secondAttribute="trailing" id="a1V-Ts-BFq"/>
+                                    <constraint firstAttribute="trailing" secondItem="NeK-Kr-GJF" secondAttribute="trailing" constant="104" id="dLc-df-Lev"/>
+                                    <constraint firstAttribute="trailing" secondItem="ChC-uo-10Y" secondAttribute="trailing" id="fQe-bu-a4w"/>
+                                    <constraint firstItem="3lP-zM-HnA" firstAttribute="top" secondItem="ChC-uo-10Y" secondAttribute="bottom" id="fVg-L8-UIP"/>
+                                    <constraint firstAttribute="bottom" secondItem="ChC-uo-10Y" secondAttribute="bottom" constant="247.5" id="kOC-Ya-t9u"/>
+                                    <constraint firstAttribute="bottom" secondItem="3lP-zM-HnA" secondAttribute="bottom" constant="-1" id="nai-G9-sbn"/>
+                                    <constraint firstItem="3lP-zM-HnA" firstAttribute="leading" secondItem="Kvu-L9-1xy" secondAttribute="leading" id="t5Q-bK-seL"/>
+                                    <constraint firstItem="NeK-Kr-GJF" firstAttribute="top" secondItem="Kvu-L9-1xy" secondAttribute="top" constant="3" id="wT6-Sq-TyN"/>
+                                    <constraint firstItem="ChC-uo-10Y" firstAttribute="top" secondItem="NeK-Kr-GJF" secondAttribute="bottom" constant="3" id="yog-Ga-lva"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00 - 01:00 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dby-EQ-WmQ">
                                 <rect key="frame" x="27" y="387" width="148" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -568,142 +696,14 @@
                                     <action selector="buttonsTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sC6-xP-KB3"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="calCell" translatesAutoresizingMaskIntoConstraints="NO" id="Kvu-L9-1xy">
-                                <rect key="frame" x="20" y="43" width="374" height="336"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Feb 2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeK-Kr-GJF">
-                                        <rect key="frame" x="145" y="9" width="84.5" height="44"/>
-                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCl-y6-Dea">
-                                        <rect key="frame" x="5" y="18" width="115" height="22"/>
-                                        <state key="normal" title="Button" image="arrowshape.turn.up.left.fill" catalog="system"/>
-                                        <connections>
-                                            <action selector="previousMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yB7-yp-s0M"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB2-LF-rT4">
-                                        <rect key="frame" x="229.5" y="9" width="164.5" height="44"/>
-                                        <state key="normal" title="Button" image="arrowshape.turn.up.right.fill" catalog="system"/>
-                                        <connections>
-                                            <action selector="nextMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qip-OW-5cR"/>
-                                        </connections>
-                                    </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-zM-HnA">
-                                        <rect key="frame" x="0.0" y="77" width="377.5" height="259"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="YIv-p7-Zax">
-                                            <size key="itemSize" width="39" height="30"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calCell" id="ObX-Ca-Eyn" customClass="CalendarCell" customModule="everydaynik" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K2W-eo-zoF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-cE-XS9">
-                                                            <rect key="frame" x="9.5" y="-12" width="9.5" height="38"/>
-                                                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="78Q-cE-XS9" firstAttribute="centerX" secondItem="K2W-eo-zoF" secondAttribute="centerX" id="9Is-TM-M5X"/>
-                                                        <constraint firstItem="78Q-cE-XS9" firstAttribute="centerY" secondItem="K2W-eo-zoF" secondAttribute="centerY" multiplier="0.5" id="jBG-MD-J42"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="39" height="30"/>
-                                                <connections>
-                                                    <outlet property="dayOfMonth" destination="78Q-cE-XS9" id="Lvv-v9-Ihr"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="RCR-qO-Ztf"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="eQa-UL-kCx"/>
-                                        </connections>
-                                    </collectionView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="ChC-uo-10Y">
-                                        <rect key="frame" x="0.0" y="39" width="377.5" height="37.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRE-Rj-aax">
-                                                <rect key="frame" x="0.0" y="0.0" width="30.5" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hI-BT-mdj">
-                                                <rect key="frame" x="59.5" y="0.0" width="33.5" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-DN-xaG">
-                                                <rect key="frame" x="122" y="0.0" width="29" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDw-7x-tV0">
-                                                <rect key="frame" x="180" y="0.0" width="35" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-iF-7YZ">
-                                                <rect key="frame" x="244" y="0.0" width="29.5" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL2-Qi-O5G">
-                                                <rect key="frame" x="302.5" y="0.0" width="20" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnN-Nq-7ee">
-                                                <rect key="frame" x="351.5" y="0.0" width="26" height="37.5"/>
-                                                <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="nB2-LF-rT4" firstAttribute="centerY" secondItem="NeK-Kr-GJF" secondAttribute="centerY" id="57m-BW-wBG"/>
-                                    <constraint firstItem="NeK-Kr-GJF" firstAttribute="leading" secondItem="GCl-y6-Dea" secondAttribute="trailing" id="9RW-8J-YXw"/>
-                                    <constraint firstItem="GCl-y6-Dea" firstAttribute="centerY" secondItem="NeK-Kr-GJF" secondAttribute="centerY" id="9aE-YK-SRH"/>
-                                    <constraint firstAttribute="bottom" secondItem="3lP-zM-HnA" secondAttribute="bottom" id="Eog-ia-92s"/>
-                                    <constraint firstItem="ChC-uo-10Y" firstAttribute="leading" secondItem="Kvu-L9-1xy" secondAttribute="leading" id="RXL-wP-du6"/>
-                                    <constraint firstAttribute="trailing" secondItem="3lP-zM-HnA" secondAttribute="trailing" id="VXi-AX-Ge6"/>
-                                    <constraint firstItem="nB2-LF-rT4" firstAttribute="height" secondItem="NeK-Kr-GJF" secondAttribute="height" id="cJP-sX-N1O"/>
-                                    <constraint firstItem="3lP-zM-HnA" firstAttribute="leading" secondItem="Kvu-L9-1xy" secondAttribute="leading" id="cu3-AV-nUo"/>
-                                    <constraint firstItem="ChC-uo-10Y" firstAttribute="top" secondItem="NeK-Kr-GJF" secondAttribute="bottom" constant="5" id="dnF-He-dKE"/>
-                                    <constraint firstItem="nB2-LF-rT4" firstAttribute="leading" secondItem="NeK-Kr-GJF" secondAttribute="trailing" id="ewS-GU-Ms6"/>
-                                    <constraint firstAttribute="trailing" secondItem="ChC-uo-10Y" secondAttribute="trailing" id="nbg-7x-wfa"/>
-                                    <constraint firstItem="GCl-y6-Dea" firstAttribute="height" secondItem="NeK-Kr-GJF" secondAttribute="height" id="rPx-g2-G4V"/>
-                                    <constraint firstItem="3lP-zM-HnA" firstAttribute="top" secondItem="ChC-uo-10Y" secondAttribute="bottom" id="uxY-AU-ujL"/>
-                                    <constraint firstItem="ChC-uo-10Y" firstAttribute="centerX" secondItem="Kvu-L9-1xy" secondAttribute="centerX" id="vmV-pu-20r"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nB2-LF-rT4" secondAttribute="trailing" id="Hzo-OK-50T"/>
-                            <constraint firstItem="NeK-Kr-GJF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QRY-52-bOe"/>
-                            <constraint firstItem="GCl-y6-Dea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="fcM-ks-F4e"/>
-                            <constraint firstItem="NeK-Kr-GJF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="oZS-lH-g1Y"/>
+                            <constraint firstItem="Kvu-L9-1xy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JJF-eL-KR3"/>
+                            <constraint firstItem="Kvu-L9-1xy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q48-tJ-H2v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kvu-L9-1xy" secondAttribute="trailing" constant="20" id="QfE-6D-6EY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Kvu-L9-1xy" secondAttribute="top" constant="1" id="isG-HJ-pGC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kvu-L9-1xy" secondAttribute="bottom" constant="484" id="yPU-0X-ty6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

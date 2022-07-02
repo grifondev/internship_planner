@@ -14,13 +14,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var monthLabel: UILabel!
     
-    @IBAction func nextMonth(_ sender: UIButton)
+    @IBAction func nextMonth(_ sender: Any)
     {
         selectedDate = CalendarHelper().plusMonth(date: selectedDate)
         setMonthView()
     }
     
-    @IBAction func previousMonth(_ sender: UIButton)
+    @IBAction func previousMonth(_ sender: Any)
     {
         selectedDate = CalendarHelper().minusMonth(date: selectedDate)
         setMonthView()
