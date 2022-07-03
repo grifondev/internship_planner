@@ -7,6 +7,15 @@
 
 import UIKit
 
+struct selectedDateByUser
+{
+    var day: Int = 1
+    var month: String = "January"
+    var year: String = "1970"
+}
+
+var selectedFromCalendar: selectedDateByUser = selectedDateByUser()
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var buttonTitle: String? = ""
@@ -17,12 +26,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func nextMonth(_ sender: Any)
     {
         selectedDate = CalendarHelper().plusMonth(date: selectedDate)
+        previousButton.backgroundColor = UIColor.white
         setMonthView()
     }
     
     @IBAction func previousMonth(_ sender: Any)
     {
         selectedDate = CalendarHelper().minusMonth(date: selectedDate)
+        previousButton.backgroundColor = UIColor.white
         setMonthView()
     }
     
@@ -75,6 +86,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         monthLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + CalendarHelper().yearString(date: selectedDate)
+        selectedFromCalendar.month = CalendarHelper().monthString(date: selectedDate)
+        selectedFromCalendar.year = CalendarHelper().yearString(date: selectedDate)
         collectionView.reloadData()
     }
     
@@ -87,23 +100,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calCell", for: indexPath) as! CalendarCell
         
-        cell.dayOfMonth.text = totalSquares[indexPath.item]
+        cell.buttonDayName.setTitle(totalSquares[indexPath.item], for: .normal)
         
         return cell
     }
     
     func openDealWindow() {
-        let windowDeal = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dealScrn") as! dealScreen // 1
+        let windowDeal = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dealScrn") as! dealScreen
                 
-        self.addChild(windowDeal) // 2
-        windowDeal.view.frame = self.view.frame  // 3
-        self.view.addSubview(windowDeal.view) // 4
+        self.addChild(windowDeal)
+        windowDeal.view.frame = self.view.frame
+        self.view.addSubview(windowDeal.view)
                 
-        windowDeal.didMove(toParent: self) // 5
+        windowDeal.didMove(toParent: self)
         
         windowDeal.windowTime.text = buttonTitle!
-        windowDeal.windowDate.text = CalendarHelper().dayString(date: selectedDate) + " " + CalendarHelper().monthString(date: selectedDate) + " " + CalendarHelper().yearString(date: selectedDate)
+        windowDeal.windowDate.text = String(selectedFromCalendar.day) + " " + selectedFromCalendar.month + " " + selectedFromCalendar.year
     }
+
     
     override open var shouldAutorotate: Bool
     {

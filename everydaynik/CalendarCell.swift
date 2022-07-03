@@ -8,7 +8,24 @@
 
 import UIKit
 
+var previousButton: UIButton = UIButton()
+
 class CalendarCell: UICollectionViewCell
 {
-    @IBOutlet weak var dayOfMonth: UILabel!
+    
+    @IBAction func buttonDay(_ sender: UIButton)
+    {
+        makeThisDaySelected(sender)
+    }
+    @IBOutlet weak var buttonDayName: UIButton!
+    
+    func makeThisDaySelected(_ sender: UIButton)
+    {
+        previousButton.backgroundColor = UIColor.white
+        sender.layer.cornerRadius = sender.frame.height / 2
+        sender.clipsToBounds = true
+        sender.backgroundColor = UIColor.blue
+        previousButton = sender
+        selectedFromCalendar.day = Int(sender.currentTitle!)!
+    }
 }

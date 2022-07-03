@@ -102,18 +102,22 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-cE-XS9">
-                                                            <rect key="frame" x="20" y="-6" width="24" height="53"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-nG-0Rc">
+                                                            <rect key="frame" x="16" y="5" width="30" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="20"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <fontDescription key="fontDescription" name="NotoSansMyanmar-Bold" family="Noto Sans Myanmar" pointSize="20"/>
+                                                            <state key="normal" title="1">
+                                                                <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="buttonDay:" destination="ObX-Ca-Eyn" eventType="touchUpInside" id="o3X-dz-xwh"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="64" height="64"/>
                                                 <connections>
-                                                    <outlet property="dayOfMonth" destination="78Q-cE-XS9" id="Lvv-v9-Ihr"/>
+                                                    <outlet property="buttonDayName" destination="rm6-nG-0Rc" id="atn-Ip-t32"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -816,7 +820,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="32" height="32"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
     </resources>
 </document>
